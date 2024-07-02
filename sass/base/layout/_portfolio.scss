@@ -1,0 +1,200 @@
+.app {
+    margin-top: 94px;
+    &-list {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 50px;
+    }
+    &-item > a {
+      color: $color-paragraph;
+      font-weight: 500;
+      line-height: 26px;
+      /* 162.5% */
+      letter-spacing: 0.48px;
+    }
+    &-item a {
+      flex-shrink: 0;
+      background: #f5f4fa;
+      border-radius: 4px;
+      border: 1px solid #f5f4fa;
+      padding: 6px 22px;
+    }
+  
+    .app-item:hover a {
+      border-radius: 4px;
+      background: $color-text2;
+      border: 1px solid #f5f4fa;
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  
+      /* shadow-middle */
+      box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+      transition-duration: 250ms;
+      transform: cubic-bezier(0.4, 0, 0.2, 1);
+      color: #fff;
+    }
+  
+    .portfolio-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 15px;
+      margin-bottom: 94px;
+    }
+  
+    .portfolio-item {
+      width: 370px;
+      border: 1px solid #eee;
+      background: #fff;
+    }
+  
+    .portfolio-item:hover {
+      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+        0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+      transition-duration: 250ms;
+      transform: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+    .animation-box {
+      overflow: hidden;
+      height: 294px;
+      margin: 0 auto;
+      position: relative;
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(33, 150, 243, 0.9);
+      width: 100%;
+      height: 100%;
+      transform: translatey(100%);
+      transition: transform 250ms ease-in-out;
+    }
+  
+    .animation-box:hover .overlay {
+      transform: translatey(0);
+    }
+  
+    .overlay .animation-text {
+      color: #fff;
+      // width: 322px;
+      padding: 32px 24px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      /* 155.556% */
+      letter-spacing: 0.54px;
+    }
+  
+    .portfolio-img {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .portfolio-title {
+      font-size: 18px;
+      line-height: 36px;
+      /* 200% */
+      letter-spacing: 1.08px;
+      margin-top: 20px;
+      margin-left: 24px;
+    }
+  
+    .portfolio-text {
+      color: $color-text;
+      line-height: 30px;
+      /* 187.5% */
+      letter-spacing: 0.48px;
+      margin-left: 24px;
+      margin-bottom: 20px;
+    }
+  
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      .app-list {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 50px;
+      }
+      .portfolio-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .portfolio-item {
+        flex-basis: calc((100% - 30px) / 2);
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      .portfolio-img {
+        width: 370px;
+      }
+  
+      .app-list {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 50px;
+      }
+  
+      &-item > a {
+        color: #212121;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.48px;
+      }
+      &-item a {
+        flex-shrink: 0;
+        background: #f5f4fa;
+        border-radius: 4px;
+        border: 1px solid #f5f4fa;
+        padding: 6px 22px;
+      }
+      .portfolio-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 15px;
+        margin-bottom: 94px;
+      }
+      .portfolio-item {
+        flex-basis: calc((100% - 3 * 30px) / 3);
+        width: 370px;
+        border: 1px solid #eee;
+        background: #fff;
+      }
+      .animation-box {
+        overflow: hidden;
+        width: 370px;
+        height: 294px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(33, 150, 243, 0.9);
+        width: 370px;
+        height: 294px;
+        transform: translatey(100%);
+        transition: transform 250ms ease-in-out;
+      }
+      .overlay .animation-text {
+        color: #fff;
+        width: 322px;
+        padding: 63px 24px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.54px;
+      }
+    }
+  }

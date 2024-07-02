@@ -1,0 +1,96 @@
+.feature {
+    display: flex;
+    margin-bottom: 118px;
+  
+    &-title {
+      color: var(--color-paragraph);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.42px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    &-antena {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 25px 100px;
+      margin: 0 auto;
+    }
+    &-div {
+      // height: 120px;
+      padding: 25px 0;
+      border-radius: 4px;
+      background: #f5f4fa;
+      background-repeat: no-repeat;
+      margin-bottom: 30px;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &-text {
+      height: 72px;
+      color: $color-text;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 171%;
+      letter-spacing: 0.42px;
+    }
+  
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      .feature-list {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      &-item {
+        flex-basis: calc((100% - 30px) / 2);
+      }
+      .active::after {
+        top: 51px;
+      }
+    }
+  
+    @media screen and (min-width: 1200px) {
+      .feature-list {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      }
+      &-item {
+        flex-basis: calc((100% - 3 * 30px) / 4);
+      }
+  
+      .feature-title {
+        color: $color-paragraph;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+  
+      .feature-text {
+        height: 72px;
+        color: #757575;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 171%;
+        letter-spacing: 0.42px;
+        text-align: inherit;
+      }
+    }
+  }
